@@ -1,6 +1,4 @@
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
 int main() {
@@ -8,12 +6,12 @@ int main() {
     int m, n;
     cin >> m >> n;
 
-    vector<long long> nums1(m + n);
+    long long nums1[m + n];
     for (int i = 0; i < m; ++i) {
         cin >> nums1[i];
     }
 
-    vector<long long> nums2(n);
+    long long nums2[n];
     for (int i = 0; i < n; ++i) {
         cin >> nums2[i];
     }
