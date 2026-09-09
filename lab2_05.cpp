@@ -2,9 +2,8 @@
 #include <algorithm>
 using namespace std;
 
-
-int countSeqLength(long long arr[],int n){
-    int seqLength = 1;
+int countSeqLength(int arr[],int n){
+    int count = 1;
     sort(arr,arr+n);
     for(int i = 0; i < n-1;i++){
         if((arr[i+1]-arr[i]) >1){
@@ -14,17 +13,17 @@ int countSeqLength(long long arr[],int n){
             continue;
         }
         if(arr[i+1] == arr[i]+1){
-            seqLength++;
+            count++;
         }
     }
-    return seqLength;
+    return count;
 }
 
 int main() {
     int n;
     cin>>n; 
 
-    long long arr[n];
+    int arr[n];
 
     for(int i = 0; i<n;i++){ 
         cin>>arr[i];  
