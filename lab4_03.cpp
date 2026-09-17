@@ -1,3 +1,44 @@
+/*
+--Matrix Transpose Using Classes--
+
+You are given two integers R and C representing the number of rows and columns of a matrix.
+
+Create a class Matrix that dynamically allocates a 2D array using pointers. The class must:
+
+Allocate memory using a constructor
+Free all allocated memory using a destructor
+Provide a function transpose() to transpose the matrix
+Provide a function print() to display the matrix After reading the matrix, transpose it and print the resulting matrix.
+Input Format
+
+The first line contains two integers R and C
+
+The next R lines contain C space-separated integers representing the matrix elements
+
+R C a11 a12 ... a1C a21 a22 ... a2C ... aR1 aR2 ... aRC
+
+Constraints
+
+1 <= R, C <= 1000 -10^9 <= matrix[i][j] <= 10^9
+
+Output Format
+
+Print the transposed matrix of size C x R.
+
+Each row of the output should contain space-separated integers.
+
+Sample Input 0
+
+2 3
+1 2 3
+4 5 6
+Sample Output 0
+
+1 4
+2 5
+3 6
+*/
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,39 @@
+/*
+--Average Marks Using Constructor and Destructor--
+
+You are given an integer N followed by N integer marks of a student.
+
+Create a class StudentMarks that:
+
+Uses a constructor to store N marks in an array
+Uses a member function average() to calculate the average marks
+Uses a destructor (even if it is simple)
+Uses array indexing only (do not use STL containers)
+The program must compute and print the average of the marks using integer division.
+Input Format
+
+The first line contains an integer N
+The second line contains N space-separated integers representing the marks
+N
+
+m1 m2 m3 ... mN
+
+Constraints
+
+1 <= N <= 100 0 <= marks[i] <= 100
+Output Format
+
+Print a single integer representing the average marks of the student using integer division.
+
+Sample Input 0
+
+5
+60 70 80 90 100
+Sample Output 0
+
+80
+*/
+
 #include <iostream>
 using namespace std;
 
