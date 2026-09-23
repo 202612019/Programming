@@ -80,7 +80,6 @@ Result after explicit casting to char (static_cast):
 using namespace std;
 
 int main() {
-    
     double n;
     cin >> n;
     
@@ -100,8 +99,15 @@ int main() {
     cout << "Result after explicit casting to long long (C-style): " << l <<endl;
     cout << "Result after explicit casting to long long (static_cast): " << sl <<endl;
     
-    cout << "Result after explicit casting to char (C-style): " << c <<endl;
-    cout << "Result after explicit casting to char (static_cast): " << sc<<endl;
+    cout << "Result after explicit casting to char (C-style): ";
+    if (c >= 32 && c <= 126)
+        cout << c;
+    cout << endl;
+
+    cout << "Result after explicit casting to char (static_cast): ";
+    if (sc >= 32 && sc <= 126)
+        cout << sc;
+    cout << endl;
     
     return 0;
 }
