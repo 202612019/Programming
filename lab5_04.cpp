@@ -78,9 +78,7 @@ public:
         delete value;
     }
 
-    void display() {
-        cout << *value << endl;
-    }
+    
 
     void setValue(int v) {
         *value = v;
