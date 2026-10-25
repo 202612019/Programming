@@ -48,3 +48,78 @@ PushNotification destructor
 Notification destructor
 */
 
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+class Notification {
+    public:
+        virtual ~Notification() {
+            cout << "Notification destructor\n";
+        }
+        
+        virtual void send() const = 0;
+};
+
+class EmailNotification : public Notification {
+    public:
+        void send() const override {
+            cout << "Sending Email\n";
+        }
+        
+        ~EmailNotification() override {
+            cout << "EmailNotification destructor\n";
+        }
+};
+
+class SMSNotification : public Notification {
+    public:
+        void send() const override {
+            cout << "Sending SMS\n";
+        }
+        
+        ~SMSNotification() override {
+            cout << "SMSNotification destructor\n";
+        }
+};
+
+class PushNotification : public Notification {
+    public:
+        void send() const override {
+            cout << "Sending Push Notification\n";
+        }
+        
+        ~PushNotification() override {
+            cout << "PushNotification destructor\n";
+        }
+};
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<Notification*> notifications;
+    for (int i = 0; i < n; ++i) {
+        char type;
+        cin >> type;
+        
+        if (type == 'E') {
+            notifications.push_back(new EmailNotification());
+        } else if (type == 'S') {
+            notifications.push_back(new SMSNotification());
+        } else if (type == 'P') {
+            notifications.push_back(new PushNotification());
+        }
+    }
+
+    for (Notification* nt : notifications) {
+        nt->send();
+    }
+
+    for (Notification* nt : notifications) {
+        delete nt; 
+    }
+    
+    return 0;
+}
